@@ -33,6 +33,10 @@ Official references:
 
 See [docs/mac-hotkey-setup.md](docs/mac-hotkey-setup.md).
 
+## UI Elements
+
+The visible Raycast command, macOS prompt, success notification, and Notion capture section are documented in [docs/ui-elements.md](docs/ui-elements.md).
+
 ## Security
 
 Do not commit your `.env` file. It contains your Notion token. The repo ignores `.env` by default.
