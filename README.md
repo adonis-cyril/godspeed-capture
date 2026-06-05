@@ -33,6 +33,8 @@ Official references:
 
 See [docs/mac-hotkey-setup.md](docs/mac-hotkey-setup.md).
 
+Users choose the Notion destination in `.env`: the target page, the capture section name, and an optional anchor heading. The capture section can be an existing top-level toggle, which is useful for personal todo-list layouts.
+
 ## UI Elements
 
 The visible Raycast command, macOS prompt, success notification, and Notion capture section are documented in [docs/ui-elements.md](docs/ui-elements.md).

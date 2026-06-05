@@ -31,7 +31,38 @@ NOTION_CAPTURE_HEADING="Quick Capture"
 NOTION_ANCHOR_HEADING=""
 ```
 
-`NOTION_ANCHOR_HEADING` is optional. If you set it, the capture heading is created directly above that top-level heading. If you leave it blank, the capture heading is created at the bottom of the Notion page.
+## 3. Choose the Destination
+
+Godspeed Capture stores entries in a Notion page and capture section chosen by the user.
+
+`NOTION_TODO_PAGE_ID` is the Notion page where entries are stored. Copy the page URL from Notion and use the 32-character page ID from that URL. The page must be shared with the Notion integration.
+
+`NOTION_CAPTURE_HEADING` is the section that receives new entries. If it does not exist, the script creates it as a top-level toggle block. Every new entry is appended inside it as an unchecked checklist item.
+
+`NOTION_ANCHOR_HEADING` is optional. If you set it, the capture section is created directly above that existing top-level heading. If you leave it blank, the capture section is created at the bottom of the Notion page.
+
+Common setups:
+
+```bash
+# Create or use "Quick Capture" at the bottom of the page.
+NOTION_CAPTURE_HEADING="Quick Capture"
+NOTION_ANCHOR_HEADING=""
+```
+
+```bash
+# Create or use "Inbox" directly above an existing "Today" heading.
+NOTION_CAPTURE_HEADING="Inbox"
+NOTION_ANCHOR_HEADING="Today"
+```
+
+```bash
+# Use an existing top-level toggle called "Godspeed Notes".
+# New entries are stored inside that toggle.
+NOTION_CAPTURE_HEADING="Godspeed Notes"
+NOTION_ANCHOR_HEADING=""
+```
+
+If someone wants entries inside an existing toggle block, they should name that toggle in `NOTION_CAPTURE_HEADING`. The script looks for a matching top-level toggle or heading first. If it finds one, it appends entries inside it. If it does not find one, it creates a new top-level toggle with that name.
 
 Test it:
 
@@ -39,7 +70,7 @@ Test it:
 ./scripts/add-notion-todo.sh
 ```
 
-## 3. Install the Raycast command
+## 4. Install the Raycast command
 
 The Raycast command lives in this project:
 
