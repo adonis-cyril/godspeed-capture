@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build:iphone-shortcut": "node shortcuts/generate-iphone-shortcut.mjs"
+  },
+  "devDependencies": {
+    "@joshfarrant/shortcuts-js": "^0.6.0"
+  }
+}

@@ -31,7 +31,9 @@ Official references:
 
 ## Setup
 
-See [docs/mac-hotkey-setup.md](docs/mac-hotkey-setup.md).
+For Mac hotkey capture, see [docs/mac-hotkey-setup.md](docs/mac-hotkey-setup.md).
+
+For iPhone lock-screen capture, see [docs/iphone-lock-screen-shortcut.md](docs/iphone-lock-screen-shortcut.md).
 
 Users choose the Notion destination in `.env`: the target page, the capture section name, and an optional anchor heading. The capture section can be an existing top-level toggle, which is useful for personal todo-list layouts.
 
